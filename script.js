@@ -25,8 +25,8 @@ const account1 = {
     '2022-03-30T23:36:17.929Z',
     '2022-03-31T10:51:36.790Z',
   ],
-  currency: 'EUR',
-  locale: 'pt-PT', // de-DE
+  currency: 'INR',
+  locale: 'en-in', // de-DE
 };
 
 const account2 = {
@@ -46,7 +46,7 @@ const account2 = {
     '2020-07-26T12:01:20.894Z',
   ],
   currency: 'USD',
-  locale: 'en-US',
+  locale: 'en-in',
 };
 
 const accounts = [account1, account2];
@@ -99,6 +99,8 @@ const formatCurr = function (value, locale, currency) {
   const formattedMovement = new Intl.NumberFormat(locale, options).format(
     value.toFixed(2)
   );
+
+  console.log(locale)
   return formattedMovement;
 };
 
